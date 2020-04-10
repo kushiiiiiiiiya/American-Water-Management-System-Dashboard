@@ -34,7 +34,7 @@
 </head>
 
 <body>
-
+<!--NAVBAR START-->
     <nav class="navbar navbar-expand-md navbar-light bg-light">
         <a href="#" class="navbar-brand">
             <img src="logo.png" width="200" alt="logo">
@@ -52,105 +52,64 @@
             </div>
         </div>
     </nav>
+<!--NAVBAR END-->
 
     <!-- CONTAINER -->
-    <div class="container-fluid p-4">
-        <!-- ROW -->
-        <div class="row">
-            <div class="col-md-12 pl-5 text-header">
-                <h1><b>Dashboard</b></h1>
-            </div>
-            <!-- CARD -->
-            <div class="card col-md-3 mx-auto my-3">
-                <div class="card-body">
-                    <h4>
-                        Delivered (Customers)
-                    </h4>
-                    <div class="display-3">10</div>
-                </div>
-            </div>
-            <!-- CARD -->
-            <div class="card col-md-3 mx-auto my-3">
-                <div class="card-body">
-                    <h4>
-                        Delivered (Bottles)
-                    </h4>
-                    <p class="display-3">69</p>
-                </div>
-            </div>
-            <!-- CARD -->
-            <div class="card col-md-3 mx-auto my-3">
-                <div class="card-body">
-                    <h4>
-                        Non Productive Visits
-                        <hr>
-                    </h4>
-                    <div class="d-flex justify-content-between">
-                        <div><b>House Closed</b> <br> <span class="display-4">2</span></div>
-                        <div><b>Stock Available</b> <br> <span class="display-4">23</span></div>
-                    </div>
-                </div>
-            </div>
-            <!-- ROW END -->
-        </div>
-        <!-- ROW -->
-        <div class="row">
-            <!-- CARD -->
-            <div class="card col-md-3 mx-auto my-3">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                        <div class="p-2">Delivery Start Time</div>
-                        <div class="p-2"><b>9 am</b></div>
-                    </div>
-                    <div class="d-flex justify-content-between">
-                        <div class="p-2">Delivery End Time</div>
-                        <div class="p-2"><b>5 pm</b></div>
-                    </div>
-                    <div class="d-flex justify-content-between">
-                        <div class="p-2">Total Time Spent</div>
-                        <div class="p-2"><b>8</b></div>
-                    </div>
-                </div>
-            </div>
-            <!-- CARD -->
-            <div class="card col-md-3 mx-auto my-3">
-                <div class="card-body">
-                    <h4>
-                        Total Complains
-                    </h4>
-                    <p class="display-3">6</p>
-                </div>
-            </div>
-            <!-- CARD -->
-            <div class="card col-md-3 mx-auto my-3">
-                <div class="card-body">
-                    <h4>
-                        <i>Total Customers Scheduled</i>
-                    </h4>
-                    <p class="display-3">15</p>
-                </div>
-            </div>
-            <!-- ROW END -->
-        </div>
-        <!-- ROW -->
-        <div class="row">
-            <!-- CARD -->
-            <div class="card col-md-11 mx-auto my-3">
-                <div class="card-body">
-                    <h4>
-                        Hourly Delivery Breakdown
-                    </h4>
-                    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-                    <div id="chart_div"></div>
-                </div>
-            </div>
-            <!-- ROW END -->
-        </div>
+    <div class="container-fluid p-4"></div>
 
-        <!-- CONTAINER END -->
+        <div class="row">
+            <link href="adddeliverycss.css" rel="stylesheet" id="bootstrap-css">
+
+<!--FORM START-->
+<div class="container contact">
+	<div class="row">
+		<div class="col-md-9">
+                <div class="col-md-9 pl-9 text-header">
+                    <h1><b>Add Delivery</b></h1>
+                </div>
+			<div class="contact-form">
+				<div class="form-group">
+				  <label class="control-label col-sm-3" for="ccode">Customer Code:</label>
+				  <div class="col-sm-10">          
+					<input type="text" class="form-control" id="ccode" name="ccode">
+				  </div>
+				</div>
+				<div class="form-group">
+				  <label class="control-label col-sm-3" for="cinv">Current Inventory:</label>
+				  <div class="col-sm-10">          
+					<input type="text" class="form-control" id="cinv" name="cinv">
+				  </div>
+				</div>
+				<div class="form-group">
+				  <label class="control-label col-sm-4" for="dinv">Customer Inventory Decrease:</label>
+				  <div class="col-sm-10">
+					<input type="text" class="form-control" id="dinv" name="dinv">
+				  </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4" for="iinv">Customer Inventory Increase:</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="iinv" name="iinv">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-sm-4" for="date">Date:</label>
+                    <div class="col-sm-10">
+                      <input type="date" class="form-control" id="date" name="date">
+                    </div>
+                  </div>
+				<div class="form-group">        
+				  <div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-default">Submit</button>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
     </div>
 
-
+<!--FORM END-->
 
     <!-- Optional JavaScript -->
     <?php require_once 'charts.php'; ?>
