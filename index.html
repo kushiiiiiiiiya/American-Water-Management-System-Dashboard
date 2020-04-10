@@ -1,0 +1,181 @@
+<?php
+
+require_once 'data.php';
+
+
+$delivered_customers = 100;
+$delivered_bottles = 100;
+$house_closed = 100;
+$stock_available = 100;
+$del_start = 100;
+$del_end = 100;
+$time_spent = 12 . "Hours";
+$complains = 0;
+$customers_scheduled = 100;
+
+?>
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Dashboard</title>
+    <style>
+        body {
+            background-color: #e0e5eb;
+        }
+
+        .card {
+            border: 0;
+            border-radius: 25px;
+            background: #e0e5eb;
+            box-shadow: 16px 16px 32px #bec3c8,
+                -16px -16px 32px #f8f8f8;
+        }
+
+        span.h1 {
+            color: rgb(158, 158, 158);
+        }
+
+        .text-header {
+            color: #174777;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a href="#" class="navbar-brand">
+            <img src="logo.png" width="200" alt="logo">
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ml-auto">
+                <a href="#" class="nav-item nav-link active">Dashboard</a>
+                <a href="#" class="nav-item nav-link">Add Delivery</a>
+                <a href="#" class="nav-item nav-link">Report</a>
+                <a href="#" class="nav-item nav-link">Logot</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTAINER -->
+    <div class="container-fluid p-4">
+        <!-- ROW -->
+        <div class="row">
+            <div class="col-md-12 pl-5 text-header">
+                <h1><b>Dashboard</b></h1>
+            </div>
+            <!-- CARD -->
+            <div class="card col-md-3 mx-auto my-3">
+                <div class="card-body">
+                    <h4>
+                        Delivered (Customers)
+                    </h4>
+                    <div class="display-3">10</div>
+                </div>
+            </div>
+            <!-- CARD -->
+            <div class="card col-md-3 mx-auto my-3">
+                <div class="card-body">
+                    <h4>
+                        Delivered (Bottles)
+                    </h4>
+                    <p class="display-3">69</p>
+                </div>
+            </div>
+            <!-- CARD -->
+            <div class="card col-md-3 mx-auto my-3">
+                <div class="card-body">
+                    <h4>
+                        Non Productive Visits
+                        <hr>
+                    </h4>
+                    <div class="d-flex justify-content-between">
+                        <div><b>House Closed</b> <br> <span class="display-4">2</span></div>
+                        <div><b>Stock Available</b> <br> <span class="display-4">23</span></div>
+                    </div>
+                </div>
+            </div>
+            <!-- ROW END -->
+        </div>
+        <!-- ROW -->
+        <div class="row">
+            <!-- CARD -->
+            <div class="card col-md-3 mx-auto my-3">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <div class="p-2">Delivery Start Time</div>
+                        <div class="p-2"><b>9 am</b></div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="p-2">Delivery End Time</div>
+                        <div class="p-2"><b>5 pm</b></div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="p-2">Total Time Spent</div>
+                        <div class="p-2"><b>8</b></div>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD -->
+            <div class="card col-md-3 mx-auto my-3">
+                <div class="card-body">
+                    <h4>
+                        Total Complains
+                    </h4>
+                    <p class="display-3">6</p>
+                </div>
+            </div>
+            <!-- CARD -->
+            <div class="card col-md-3 mx-auto my-3">
+                <div class="card-body">
+                    <h4>
+                        <i>Total Customers Scheduled</i>
+                    </h4>
+                    <p class="display-3">15</p>
+                </div>
+            </div>
+            <!-- ROW END -->
+        </div>
+        <!-- ROW -->
+        <div class="row">
+            <!-- CARD -->
+            <div class="card col-md-11 mx-auto my-3">
+                <div class="card-body">
+                    <h4>
+                        Hourly Delivery Breakdown
+                    </h4>
+                    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                    <div id="chart_div"></div>
+                </div>
+            </div>
+            <!-- ROW END -->
+        </div>
+
+        <!-- CONTAINER END -->
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <?php require_once 'charts.php'; ?>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+
+</html>
